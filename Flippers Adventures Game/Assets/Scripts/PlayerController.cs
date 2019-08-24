@@ -46,8 +46,8 @@ public class PlayerController : MonoBehaviour
     void SwitchFace()
     {
         faceRight = !faceRight;
-        Vector3 faces = transform.localEulerAngles;
-        faces.y *= -1;
-        transform.localEulerAngles = faces;
+        Vector3 faces = transform.localScale;
+        faces.z *= -1;
+        transform.localScale = faces;
     }
 }

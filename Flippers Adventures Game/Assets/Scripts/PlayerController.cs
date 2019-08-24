@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     private float moveInput;
+    private Animator walkAnim;
 
     private Rigidbody rb;
 
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        walkAnim = GetComponent<Animator>();
     }
 
 
@@ -29,6 +31,15 @@ public class PlayerController : MonoBehaviour
         else if(faceRight == true && moveInput < 0)
         {
             SwitchFace();
+        }
+
+        if(moveInput == 0)
+        {
+            walkAnim.SetBool("IsWalking", false);
+        }
+        else
+        {
+            walkAnim.SetBool("IsWalking", true);
         }
     }
 

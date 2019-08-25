@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     public float checkRadius;       //the radius distance from the groundcheck
     public LayerMask whatIsGround;  //layermask
 
-    public int extraJumps;
+    private int extraJumps;
     public int extraJumpsValue;
 
     void Start()
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, checkRadius, whatIsGround);   //OVerlap use array, thats why use CheckSphere to check bool
+        isGrounded = Physics.CheckSphere(groundCheck.position, checkRadius, whatIsGround);   //Overlap use array, thats why use CheckSphere to check bool
 
 
         moveInput = Input.GetAxis("Horizontal");
@@ -65,13 +65,13 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
         {
-            rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, 8, 0), ForceMode.Impulse);       // add jump POWERRR to it
             extraJumps--;
         }
         
         else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true)
         {
-            rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, 8, 0), ForceMode.Impulse);
         }
     }
 

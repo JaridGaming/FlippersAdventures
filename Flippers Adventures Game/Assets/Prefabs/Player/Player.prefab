@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1381270069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1381270070}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1381270070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381270069}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.6866, y: -0.16999996, z: -0.10129994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8476892960233430437}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8476892960233430436
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,6 +70,7 @@ Transform:
   - {fileID: 8476892960552039638}
   - {fileID: 8476892961687627092}
   - {fileID: 8476892961536003248}
+  - {fileID: 1381270070}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -91,6 +122,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  groundCheck: {fileID: 1381270070}
+  checkRadius: 0.5
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  extraJumps: 0
+  extraJumpsValue: 1
 --- !u!1 &8476892960505516397
 GameObject:
   m_ObjectHideFlags: 0
@@ -7929,11 +7967,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8476892960542051718}
     m_Modifications:
-    - target: {fileID: 587705244808446556, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Name
-      value: Sword
-      objectReference: {fileID: 0}
     - target: {fileID: 3962423457655882164, guid: c2560c57feb1def47aa0653bc8a5a855,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7989,6 +8022,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -50.982002
       objectReference: {fileID: 0}
+    - target: {fileID: 587705244808446556, guid: c2560c57feb1def47aa0653bc8a5a855,
+        type: 3}
+      propertyPath: m_Name
+      value: Sword
+      objectReference: {fileID: 0}
     - target: {fileID: 2105981213770386547, guid: c2560c57feb1def47aa0653bc8a5a855,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -8018,66 +8056,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Convex
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855113159542883573, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Tangents.Array.data[16].x
-      value: NaN
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855113159542883573, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Tangents.Array.data[16].y
-      value: NaN
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855113159542883573, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Tangents.Array.data[16].z
-      value: NaN
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855113159542883573, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Tangents.Array.data[17].x
-      value: NaN
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855113159542883573, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Tangents.Array.data[17].y
-      value: NaN
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855113159542883573, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Tangents.Array.data[17].z
-      value: NaN
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855113159542883573, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Tangents.Array.data[18].x
-      value: NaN
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855113159542883573, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Tangents.Array.data[18].y
-      value: NaN
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855113159542883573, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Tangents.Array.data[18].z
-      value: NaN
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855113159542883573, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Tangents.Array.data[19].x
-      value: NaN
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855113159542883573, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Tangents.Array.data[19].y
-      value: NaN
-      objectReference: {fileID: 0}
-    - target: {fileID: 6855113159542883573, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Tangents.Array.data[19].z
-      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 2789878127929395625, guid: c2560c57feb1def47aa0653bc8a5a855,
         type: 3}

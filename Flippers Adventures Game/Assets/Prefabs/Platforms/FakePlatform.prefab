@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 8120591596302699609}
   - component: {fileID: 8120591596302699608}
   m_Layer: 0
-  m_Name: FloatingPlatform
+  m_Name: FakePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8120591596302699612
 Transform:
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9fb2a1af01defe347ab4af335718d34f, type: 2}
+  - {fileID: 2100000, guid: 2092be3e99b5d52419ff4bac1086c3c9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

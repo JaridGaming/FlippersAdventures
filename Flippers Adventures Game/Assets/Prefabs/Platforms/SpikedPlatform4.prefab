@@ -3589,9 +3589,9 @@ GameObject:
   - component: {fileID: 6311807310033032981}
   - component: {fileID: 6311807310033032980}
   - component: {fileID: 6311807310033032979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpikedPlatform4
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

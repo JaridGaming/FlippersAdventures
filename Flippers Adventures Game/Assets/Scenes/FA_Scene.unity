@@ -4330,6 +4330,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 336640199}
+    - target: {fileID: 810488501400507935, guid: 423c84450163a884a8cf0a51da3e2e7f,
+        type: 3}
+      propertyPath: m_SelectedFaces.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 810488501400507935, guid: 423c84450163a884a8cf0a51da3e2e7f,
+        type: 3}
+      propertyPath: m_SelectedEdges.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 810488501400507935, guid: 423c84450163a884a8cf0a51da3e2e7f,
+        type: 3}
+      propertyPath: m_SelectedVertices.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 423c84450163a884a8cf0a51da3e2e7f, type: 3}
 --- !u!1001 &2663037609940475903

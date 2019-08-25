@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
     private float moveInput;
     private Animator walkAnim;
+    private Animator swordAnim;
+    private Animator shieldAnim;
 
     private Rigidbody rb;
 
@@ -21,11 +23,21 @@ public class PlayerController : MonoBehaviour
     private int extraJumps;
     public int extraJumpsValue;
 
+    private float timeToAttack;
+    public float timeToAttackValue;
+
+    private float timeToShield;
+    public float timeToShieldValue;
+
     void Start()
     {
         extraJumps = extraJumpsValue;
+        timeToAttack = timeToAttackValue;
+        timeToShield = timeToShieldValue;
         rb = GetComponent<Rigidbody>();
         walkAnim = GetComponent<Animator>();
+        swordAnim = GetComponent<Animator>();
+        shieldAnim = GetComponent<Animator>();
     }
 
 
@@ -46,14 +58,7 @@ public class PlayerController : MonoBehaviour
             SwitchFace();
         }
 
-        if(moveInput == 0)                  // basically no movement means no animsequence.
-        {
-            walkAnim.SetBool("IsWalking", false);
-        }
-        else
-        {
-            walkAnim.SetBool("IsWalking", true);
-        }
+        WalkState();
     }
 
     void Update()
@@ -73,6 +78,9 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(new Vector3(0, 8, 0), ForceMode.Impulse);
         }
+
+        SwordState();
+        ShieldState();
     }
 
     void SwitchFace()
@@ -81,5 +89,45 @@ public class PlayerController : MonoBehaviour
         Vector3 faces = transform.localScale;           // we want to change the scale
         faces.z *= -1;
         transform.localScale = faces;
+    }
+
+    void WalkState()
+    {
+        if (moveInput == 0)                  // basically no movement means no animsequence.
+        {
+            walkAnim.SetBool("IsWalking", false);
+        }
+        else
+        {
+            walkAnim.SetBool("IsWalking", true);
+        }
+    }
+
+    void SwordState()
+    {
+        if (Input.GetMouseButtonDown(0) && timeToAttack <= 0)
+        {
+            swordAnim.SetBool("IsAttacking", true);
+            timeToAttack = timeToAttackValue;
+        }
+        else
+        {
+            swordAnim.SetBool("IsAttacking", false);
+            timeToAttack -= Time.deltaTime;
+        }
+    }
+
+    void ShieldState()
+    {
+        if (Input.GetMouseButton(1) && timeToShield <= 0)
+        {
+            shieldAnim.SetBool("IsBlocking", true);
+            timeToShield = timeToShieldValue;
+        }
+        else
+        {
+            shieldAnim.SetBool("IsBlocking", false);
+            timeToShield -= Time.deltaTime;
+        }
     }
 }

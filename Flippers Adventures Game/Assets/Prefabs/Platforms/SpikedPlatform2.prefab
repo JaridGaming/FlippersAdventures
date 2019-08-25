@@ -3589,7 +3589,7 @@ GameObject:
   - component: {fileID: 8727610653481009675}
   - component: {fileID: 8727610653481009674}
   - component: {fileID: 8727610653481009677}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpikedPlatform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3603,7 +3603,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8727610653481009676}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -19.44, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3645,7 +3645,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: ae8e0b4d99cd3b348a744c2c09496351, type: 2}
   - {fileID: 2100000, guid: ad56dfce32a33d94184c63f75cbd6c8c, type: 2}
-  - {fileID: 2100000, guid: ada9dc94b7961af4ab7369e944e035ae, type: 2}
+  - {fileID: 2100000, guid: 32e5ba4c03d760b49b91bf3cca671105, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3761,7 +3761,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 1
+    m_SubmeshIndex: 2
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1
@@ -3965,7 +3965,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 0}
-    m_SubmeshIndex: 1
+    m_SubmeshIndex: 2
     m_ManualUV: 0
     elementGroup: -1
     m_TextureGroup: -1

@@ -294,7 +294,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 05000000
+  m_SelectedFaces: 0500000000000000
   m_SelectedEdges:
   - a: 20
     b: 21
@@ -304,7 +304,15 @@ MonoBehaviour:
     b: 23
   - a: 23
     b: 22
-  m_SelectedVertices: 14000000150000001600000017000000
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  - a: 0
+    b: 0
+  m_SelectedVertices: 1400000015000000160000001700000000000000000000000000000000000000
 --- !u!64 &9193492217156739015
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -29,24 +29,19 @@ public class DamageVolume : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.name == "Player")
         {
-            if (other.GetComponent<Health>() != null)
-            {
-                PlayerSlot = other.gameObject;
-                targetHere = true;
-                //print(gameObject.name + " targeted " + myTarget.name + "!");
-            }
+            PlayerSlot = other.gameObject;
+            targetHere = true;
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == PlayerSlot)
+        if (other.tag == "Player")
         {
             targetHere = false;
             PlayerSlot = null;
-            //print(gameObject.name + " lost its target.");
         }
     }
 }

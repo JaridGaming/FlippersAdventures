@@ -12,11 +12,15 @@ public class Damage : MonoBehaviour
         {
             HealthSystem healthSystem = new HealthSystem(100);
 
-            healthSystem.Damage(100);
-
-            Debug.Log("Health: " + healthSystem.GetHealth());
-
             Triggered = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player" || other.name == "Player")
+        {
+            Triggered = false;
         }
     }
 }

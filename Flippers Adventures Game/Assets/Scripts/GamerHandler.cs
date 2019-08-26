@@ -9,5 +9,9 @@ public class GamerHandler : MonoBehaviour
         HealthSystem healthSystem = new HealthSystem(100);
 
         Debug.Log("Health: "+healthSystem.GetHealth());
+
+        healthSystem.Damage(100);
+
+        Debug.Log("Health: " + healthSystem.GetHealth());
     }
 }

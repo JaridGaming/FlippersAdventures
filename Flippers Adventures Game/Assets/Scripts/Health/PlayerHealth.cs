@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : HealthComponent
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // no need to add ApplyDamage as it does not need to modify
 
-    // Update is called once per frame
-    void Update()
+    protected override void Death()
     {
-        
+        Destroy(gameObject);
+        base.Death();
     }
 }

@@ -2,17 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : HealthComponent
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void Death()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        base.Death();
+        Destroy(gameObject);
     }
 }

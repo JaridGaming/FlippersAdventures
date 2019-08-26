@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4571375528903412377}
   - component: {fileID: 4571375528903412379}
   - component: {fileID: 4571375528903412378}
+  - component: {fileID: 150831311203960450}
   m_Layer: 0
   m_Name: DeathParticles
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4571375528903412376}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -2.82, y: 2.311, z: 2.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4753,3 +4754,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &150831311203960450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4571375528903412376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bd0bae7b436904981209d293b15769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 1

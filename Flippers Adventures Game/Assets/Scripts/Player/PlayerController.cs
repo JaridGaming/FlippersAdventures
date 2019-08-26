@@ -25,6 +25,10 @@ public class PlayerController : MonoBehaviour
 
     private float timeToAttack;
     public float timeToAttackValue;
+    public Transform attackPos;
+    public LayerMask whatIsEnemies;
+    public int slashDmg;
+    public float attackRange;
 
     private float timeToShield;
     public float timeToShieldValue;
@@ -109,6 +113,13 @@ public class PlayerController : MonoBehaviour
         {
             swordAnim.SetBool("IsAttacking", true);
             timeToAttack = timeToAttackValue;
+
+            Collider[] enemiesToDmg = Physics.OverlapSphere(attackPos.position, attackRange, whatIsEnemies);
+            for(int i = 0; i< enemiesToDmg.Length; i++)
+            {
+                enemiesToDmg[i].GetComponent<HealthComponent>().ApplyDamage(slashDmg);
+                Debug.Log("HIt");
+            }
         }
         else
         {
@@ -117,6 +128,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //knockback on the shield
     void ShieldState()
     {
         if (Input.GetMouseButton(1) && timeToShield <= 0)
@@ -129,5 +141,11 @@ public class PlayerController : MonoBehaviour
             shieldAnim.SetBool("IsBlocking", false);
             timeToShield -= Time.deltaTime;
         }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
 }

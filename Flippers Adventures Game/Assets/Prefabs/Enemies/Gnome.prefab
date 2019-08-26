@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2104184617}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7760270468127300946}
   - component: {fileID: 8718595012969799172}
   - component: {fileID: 6584293379974449602}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ArmL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 8189550956892651796}
   - component: {fileID: 7949742060973115543}
   - component: {fileID: 4048447081877986203}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1321,7 +1321,7 @@ GameObject:
   - component: {fileID: 4143363080570262608}
   - component: {fileID: 4776935114359813388}
   - component: {fileID: 7372188176541575131}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LegR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2162,7 +2162,7 @@ GameObject:
   - component: {fileID: 1766199275736860944}
   - component: {fileID: 5433147122127863400}
   - component: {fileID: 880127229984497170}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ArmR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2599,7 +2599,7 @@ GameObject:
   - component: {fileID: 5166388774166020199}
   - component: {fileID: 2279485687575901435}
   - component: {fileID: 357277606022782615}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3391,7 +3391,8 @@ GameObject:
   - component: {fileID: 4318557809023117884}
   - component: {fileID: 1504213415}
   - component: {fileID: 1504213414}
-  m_Layer: 0
+  - component: {fileID: 3076093411595797192}
+  m_Layer: 9
   m_Name: Gnome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3476,6 +3477,20 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &3076093411595797192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3857590335039127129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2e7d53c991ea74b8fb6cb017ce98be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+  deathFX: {fileID: 4571375528903412376, guid: 0688c8fccd3fa1b4ebe986ee6c35ad63, type: 3}
 --- !u!1 &3995176265801976164
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,7 +3504,7 @@ GameObject:
   - component: {fileID: 2682605864023945229}
   - component: {fileID: 3314103799354630649}
   - component: {fileID: 5529080649878055564}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4282,7 +4297,7 @@ GameObject:
   - component: {fileID: 4846151491280579915}
   - component: {fileID: 6385517573610819146}
   - component: {fileID: 9113838961670115022}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LegL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5123,7 +5138,7 @@ GameObject:
   - component: {fileID: 3528371341082675030}
   - component: {fileID: 6539488673742478172}
   - component: {fileID: 1853773504725861688}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5932,7 +5947,7 @@ GameObject:
   - component: {fileID: 7420296322547335386}
   - component: {fileID: 2602000771505538237}
   - component: {fileID: 6714165975535230350}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 8476892960233430437}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &427412848505697351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8399821293720991802}
+  m_Layer: 0
+  m_Name: AttackPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8399821293720991802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427412848505697351}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.67, y: 0.87, z: -0.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8476892960233430437}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8476892960233430436
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,6 +72,7 @@ GameObject:
   - component: {fileID: 997118928400596279}
   - component: {fileID: 1766649343118600715}
   - component: {fileID: 7365460482049257296}
+  - component: {fileID: 1585698279}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -71,6 +102,7 @@ Transform:
   - {fileID: 8476892961687627092}
   - {fileID: 8476892961536003248}
   - {fileID: 1381270070}
+  - {fileID: 8399821293720991802}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -129,7 +161,27 @@ MonoBehaviour:
     m_Bits: 256
   extraJumpsValue: 1
   timeToAttackValue: 2
+  attackPos: {fileID: 8399821293720991802}
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 512
+  slashDmg: 1
+  attackRange: 1
   timeToShieldValue: 1
+--- !u!114 &1585698279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8476892960233430436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f586875edd28d394abd93b61ce91f9b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  deathFX: {fileID: 4571375528903412376, guid: 0688c8fccd3fa1b4ebe986ee6c35ad63, type: 3}
 --- !u!1 &8476892960505516397
 GameObject:
   m_ObjectHideFlags: 0

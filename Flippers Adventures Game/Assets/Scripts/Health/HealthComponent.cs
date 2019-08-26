@@ -37,7 +37,7 @@ public class HealthComponent : MonoBehaviour
     {
         if(deathFX != null)
         {
-            Instantiate(deathFX, transform.position, Quaternion.identity);
+            Instantiate(deathFX, transform.position, Quaternion.Euler(-90, 0 , 0));
         }
 
         Debug.Log("HealthComponent - Death Called");

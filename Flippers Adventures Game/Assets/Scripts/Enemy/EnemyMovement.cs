@@ -43,4 +43,14 @@ public class EnemyMovement : MonoBehaviour
         faces.z *= -1;
         transform.localScale = faces;
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag != "Player")
+        {
+            return;
+        }
+
+        GameplayStatics.DealDamage(other.gameObject, 1);
+    }
 }

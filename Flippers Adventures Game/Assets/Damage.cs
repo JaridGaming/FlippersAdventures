@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    public bool Triggered = false;
+    // for a moment comment out
 
-    public void OnTriggerEnter(Collider collider)
-    {
-        if (collider.tag == "Player" || collider.name == "Player")
-        {
-            HealthSystem healthSystem = new HealthSystem(100);
+    //public bool Triggered = false;
 
-            Triggered = true;
-        }
-    }
+    //public void OnTriggerEnter(Collider collider)
+    //{
+    //    if (collider.tag == "Player" || collider.name == "Player")
+    //    {
+    //        HealthSystem healthSystem = new HealthSystem(100);
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player" || other.name == "Player")
-        {
-            Triggered = false;
-        }
-    }
+    //        Triggered = true;
+    //    }
+    //}
+
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.tag == "Player" || other.name == "Player")
+    //    {
+    //        Triggered = false;
+    //    }
+    //}
 }

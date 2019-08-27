@@ -39,6 +39,7 @@ public class HealthComponent : MonoBehaviour
         {
             Instantiate(deathFX, transform.position, Quaternion.Euler(-90, 0 , 0));
         }
+        health = maxHealth;
 
         Debug.Log("HealthComponent - Death Called");
     }

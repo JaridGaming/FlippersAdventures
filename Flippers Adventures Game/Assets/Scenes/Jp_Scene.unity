@@ -3092,6 +3092,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 393692916}
     m_Modifications:
+    - target: {fileID: 3779582168254979574, guid: a05336b03b59e844e9f7331cdfe7eb79,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779582168254979574, guid: a05336b03b59e844e9f7331cdfe7eb79,
+        type: 3}
+      propertyPath: ShapeModule.type
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168766661970445474, guid: a05336b03b59e844e9f7331cdfe7eb79,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.124
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168766661970445474, guid: a05336b03b59e844e9f7331cdfe7eb79,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.153
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168766661970445474, guid: a05336b03b59e844e9f7331cdfe7eb79,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.78
+      objectReference: {fileID: 0}
     - target: {fileID: 8876910230155308905, guid: a05336b03b59e844e9f7331cdfe7eb79,
         type: 3}
       propertyPath: m_Name

@@ -41,7 +41,5 @@ public class Checkpoint : HealthComponent
         player.transform.position = spawnPoint;
         player.SetActive(true);
         timer = 2.0f;
-
-        
     }
 }

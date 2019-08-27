@@ -2,17 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Checkpoint : MonoBehaviour
+public class Checkpoint : HealthComponent
 {
-    // Start is called before the first frame update
-    void Start()
+    Vector3 spawnPoint;
+    public GameObject spawn;
+    public GameObject player;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Player" || other.name == "Player")
+        {
+            spawnPoint = spawn.transform.position;
+            Debug.Log(spawnPoint);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        if (player.activeInHierarchy == false)
+        {
+            player.transform.position = spawnPoint;
+
+            player.SetActive(true);
+        }
     }
 }

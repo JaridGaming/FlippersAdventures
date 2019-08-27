@@ -8,7 +8,7 @@ public class PlayerHealth : HealthComponent
 
     protected override void Death()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
         base.Death();
     }
 }

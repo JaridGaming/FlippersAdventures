@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Animator walkAnim;
     private Animator swordAnim;
     private Animator shieldAnim;
+    private Animator jumpAnim;
 
     private Rigidbody rb;
 
@@ -25,10 +26,10 @@ public class PlayerController : MonoBehaviour
 
     private float timeToAttack;
     public float timeToAttackValue;
-    public Transform attackPos;
-    public LayerMask whatIsEnemies;
-    public int slashDmg;
-    public float attackRange;
+    //public Transform attackPos;
+    //public LayerMask whatIsEnemies;
+    //public int slashDmg;
+    //public float attackRange;
 
     private float timeToShield;
     public float timeToShieldValue;
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
         walkAnim = GetComponent<Animator>();
         swordAnim = GetComponent<Animator>();
         shieldAnim = GetComponent<Animator>();
+        jumpAnim = GetComponent<Animator>();
     }
 
 
@@ -74,12 +76,14 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
         {
-            rb.AddForce(new Vector3(0, 8, 0), ForceMode.Impulse);       // add jump POWERRR to it
+            //jumpAnim.SetBool("IsJumping", true);
+            rb.AddForce(new Vector3(0, 8, 0), ForceMode.Impulse);      // add jump POWERRR to it
             extraJumps--;
         }
         
         else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true)
         {
+            //jumpAnim.SetBool("IsJumping", false);
             rb.AddForce(new Vector3(0, 8, 0), ForceMode.Impulse);
         }
 
@@ -114,12 +118,12 @@ public class PlayerController : MonoBehaviour
             swordAnim.SetBool("IsAttacking", true);
             timeToAttack = timeToAttackValue;
 
-            Collider[] enemiesToDmg = Physics.OverlapSphere(attackPos.position, attackRange, whatIsEnemies);
-            for(int i = 0; i< enemiesToDmg.Length; i++)
-            {
-                enemiesToDmg[i].GetComponent<HealthComponent>().ApplyDamage(slashDmg);
-                Debug.Log("HIt");
-            }
+            //Collider[] enemiesToDmg = Physics.OverlapSphere(attackPos.position, attackRange, whatIsEnemies);
+            //for(int i = 0; i< enemiesToDmg.Length; i++)
+            //{
+            //    enemiesToDmg[i].GetComponent<HealthComponent>().ApplyDamage(slashDmg);
+            //    Debug.Log("HIt");
+            //}
         }
         else
         {
@@ -143,9 +147,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
-    }
+    //void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    //}
 }

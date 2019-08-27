@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
             Collider[] enemiesToDmg = Physics.OverlapSphere(attackPos.position, attackRange, whatIsEnemies);
             for(int i = 0; i< enemiesToDmg.Length; i++)
             {
-                enemiesToDmg[i].GetComponent<HealthComponent>().ApplyDamage(slashDmg);
+                GameplayStatics.DealDamage(enemiesToDmg[i].gameObject, slashDmg);
                 Debug.Log("HIt");
             }
         }

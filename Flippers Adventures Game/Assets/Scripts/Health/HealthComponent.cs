@@ -25,7 +25,7 @@ public class HealthComponent : MonoBehaviour
 
         health = health - damage;
 
-        Debug.Log("Damage hit, health now is " + health);
+        Debug.Log(name + " Damage hit, health now is " + health);
 
         if(health <= 0)
         {

@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
 
     private float timeToShield;
     public float timeToShieldValue;
-    public GameObject shieldTrigger;
 
     void Start()
     {
@@ -136,16 +135,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButton(1) && timeToShield <= 0)
         {
             shieldAnim.SetBool("IsBlocking", true);
-            shieldTrigger.SetActive(true);
-            //timeToShield = timeToShieldValue;
-            
-
+            timeToShield = timeToShieldValue;
         }
         else
         {
             shieldAnim.SetBool("IsBlocking", false);
             timeToShield -= Time.deltaTime;
-            shieldTrigger.SetActive(false);
         }
     }
 

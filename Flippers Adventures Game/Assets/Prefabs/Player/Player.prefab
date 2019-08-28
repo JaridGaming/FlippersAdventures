@@ -178,7 +178,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8476892960233430436}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -2.82, y: 1.625, z: 2.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -260,6 +260,7 @@ MonoBehaviour:
   slashDmg: 1
   attackRange: 1
   timeToShieldValue: 1
+  shieldTrigger: {fileID: 0}
 --- !u!114 &1585698279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8089,11 +8090,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 214510733747747328, guid: a9e2750e87366214f9dc53b453f5c7c6,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 214510733747747328, guid: a9e2750e87366214f9dc53b453f5c7c6,
-        type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 1bb955ed09d145540a1dfe83aeb5cd3c,
@@ -8105,11 +8101,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5141454507032755816, guid: a9e2750e87366214f9dc53b453f5c7c6,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5141454507032755816, guid: a9e2750e87366214f9dc53b453f5c7c6,
-        type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 1bb955ed09d145540a1dfe83aeb5cd3c,
@@ -8118,16 +8109,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Convex
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 534310127203987694, guid: a9e2750e87366214f9dc53b453f5c7c6,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2334564699732474288, guid: a9e2750e87366214f9dc53b453f5c7c6,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9e2750e87366214f9dc53b453f5c7c6, type: 3}
@@ -8144,6 +8125,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8476892960542051718}
     m_Modifications:
+    - target: {fileID: 587705244808446556, guid: c2560c57feb1def47aa0653bc8a5a855,
+        type: 3}
+      propertyPath: m_Name
+      value: Sword
+      objectReference: {fileID: 0}
     - target: {fileID: 3962423457655882164, guid: c2560c57feb1def47aa0653bc8a5a855,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8199,11 +8185,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -50.982002
       objectReference: {fileID: 0}
-    - target: {fileID: 587705244808446556, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Name
-      value: Sword
-      objectReference: {fileID: 0}
     - target: {fileID: 2105981213770386547, guid: c2560c57feb1def47aa0653bc8a5a855,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -8231,11 +8212,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6050885272142386620, guid: c2560c57feb1def47aa0653bc8a5a855,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6050885272142386620, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 1bb955ed09d145540a1dfe83aeb5cd3c,
@@ -8244,48 +8220,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Convex
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2789878127929395625, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2789878127929395625, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 1bb955ed09d145540a1dfe83aeb5cd3c,
-        type: 2}
-    - target: {fileID: 2789878127929395625, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 142064338898612007, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 142064338898612007, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 1bb955ed09d145540a1dfe83aeb5cd3c,
-        type: 2}
-    - target: {fileID: 142064338898612007, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1959188563770742219, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6484177879411493394, guid: c2560c57feb1def47aa0653bc8a5a855,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6855113159542883573, guid: c2560c57feb1def47aa0653bc8a5a855,
         type: 3}
@@ -8347,10 +8281,27 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[19].z
       value: NaN
       objectReference: {fileID: 0}
-    - target: {fileID: 2997689804757674570, guid: c2560c57feb1def47aa0653bc8a5a855,
+    - target: {fileID: 2789878127929395625, guid: c2560c57feb1def47aa0653bc8a5a855,
         type: 3}
-      propertyPath: m_Mesh
+      propertyPath: m_Material
       value: 
+      objectReference: {fileID: 13400000, guid: 1bb955ed09d145540a1dfe83aeb5cd3c,
+        type: 2}
+    - target: {fileID: 2789878127929395625, guid: c2560c57feb1def47aa0653bc8a5a855,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 142064338898612007, guid: c2560c57feb1def47aa0653bc8a5a855,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 1bb955ed09d145540a1dfe83aeb5cd3c,
+        type: 2}
+    - target: {fileID: 142064338898612007, guid: c2560c57feb1def47aa0653bc8a5a855,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2560c57feb1def47aa0653bc8a5a855, type: 3}

@@ -22,8 +22,6 @@ public class Checkpoint : HealthComponent
     {
         if (player.activeInHierarchy == false)
         {
-
-
             if(timer <= 0.0f)
             {
                 Spawn();
@@ -32,7 +30,6 @@ public class Checkpoint : HealthComponent
             {
                 timer -= Time.deltaTime;
             }
-            
         }
     }
 

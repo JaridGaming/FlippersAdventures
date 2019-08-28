@@ -74,13 +74,13 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
         {
-            rb.AddForce(new Vector3(0, 8, 0), ForceMode.Impulse);       // add jump POWERRR to it
+            rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);       // add jump POWERRR to it
             extraJumps--;
         }
         
         else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true)
         {
-            rb.AddForce(new Vector3(0, 8, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, 1, 0), ForceMode.Impulse);
         }
 
         SwordState();

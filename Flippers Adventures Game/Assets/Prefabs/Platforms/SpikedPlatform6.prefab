@@ -10670,7 +10670,7 @@ GameObject:
   - component: {fileID: 4191227438196909965}
   - component: {fileID: 8277171208346131305}
   m_Layer: 8
-  m_Name: Trigger (1)
+  m_Name: DamageVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

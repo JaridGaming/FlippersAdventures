@@ -156,7 +156,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-146374
+  m_Name: pb_Mesh-5310
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -345,6 +345,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boulder
       objectReference: {fileID: 0}
+    - target: {fileID: 8883586447233514405, guid: 81bc194ed20cad84686e49fcf8bada11,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6643670576586484873, guid: 81bc194ed20cad84686e49fcf8bada11,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -423,12 +428,12 @@ PrefabInstance:
     - target: {fileID: 1724550540745056368, guid: 81bc194ed20cad84686e49fcf8bada11,
         type: 3}
       propertyPath: m_SelectedEdges.Array.size
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1724550540745056368, guid: 81bc194ed20cad84686e49fcf8bada11,
         type: 3}
       propertyPath: m_SelectedVertices.Array.size
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1724550540745056368, guid: 81bc194ed20cad84686e49fcf8bada11,
         type: 3}

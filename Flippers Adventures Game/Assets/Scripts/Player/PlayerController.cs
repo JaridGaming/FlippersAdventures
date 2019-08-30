@@ -33,8 +33,12 @@ public class PlayerController : MonoBehaviour
     private float timeToShield;
     public float timeToShieldValue;
 
+    public float timeToJumpBuffValue;
+    public float timeToJumpBuff;
+
     void Start()
     {
+        timeToJumpBuff = timeToJumpBuffValue;
         extraJumps = extraJumpsValue;
         timeToAttack = timeToAttackValue;
         timeToShield = timeToShieldValue;
@@ -74,17 +78,27 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
         {
+            if(timeToJumpBuff < timeToJumpBuffValue)
+            {
+                rb.AddForce(new Vector3(0, 7, 0), ForceMode.Impulse);   // this one is if the lumberjack is killed, then change the amount of jump
+                Invoke("Reset", 5);
+            }
             rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);       // add jump POWERRR to it
             extraJumps--;
         }
-        
+ 
         else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded == true)
         {
+            if (timeToJumpBuff < timeToJumpBuffValue)
+            {
+                rb.AddForce(new Vector3(0, 3, 0), ForceMode.Impulse);
+            }
             rb.AddForce(new Vector3(0, 1, 0), ForceMode.Impulse);
         }
 
         SwordState();
         ShieldState();
+
     }
 
     void SwitchFace()
@@ -120,7 +134,14 @@ public class PlayerController : MonoBehaviour
                                            // collider.gameObject  ==> since this collider is from gameobject
                 GameplayStatics.DealDamage(enemiesToDmg[i].gameObject, slashDmg);
                 Debug.Log("HIt");
+
+                if(enemiesToDmg[i].gameObject.tag == "LumberJack")  // check if the enemy is LumberJack then we can do jumpbuff;
+                {
+                    timeToJumpBuff = 0;
+                }
             }
+
+
         }
         else
         {
@@ -148,5 +169,10 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
+
+    private void Reset()        // basically this start when player get jump buff
+    {
+        timeToJumpBuff = timeToJumpBuffValue;
     }
 }

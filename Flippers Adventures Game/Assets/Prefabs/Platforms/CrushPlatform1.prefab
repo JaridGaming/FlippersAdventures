@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 870361280839998120}
   - component: {fileID: 1741057072631255605}
   - component: {fileID: 8521046183644311457}
+  - component: {fileID: 1062849698085222438}
   m_Layer: 0
   m_Name: CrushPlatform1
   m_TagString: Untagged
@@ -318,6 +319,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
+--- !u!95 &1062849698085222438
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8407932350305547125}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef410fcec7c6b4d45bbc14f2b5e3f970, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4263603373966171057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -392,13 +412,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2478952722465126193, guid: 6b2053658ebe72d4d8485ccda10f8069,
         type: 3}
-      propertyPath: m_Center.x
-      value: -0.6924515
+      propertyPath: m_Size.y
+      value: 10.009352
       objectReference: {fileID: 0}
     - target: {fileID: 2478952722465126193, guid: 6b2053658ebe72d4d8485ccda10f8069,
         type: 3}
-      propertyPath: m_Size.y
-      value: 10.009352
+      propertyPath: m_Center.x
+      value: -0.6924515
       objectReference: {fileID: 0}
     - target: {fileID: 2478952722465126193, guid: 6b2053658ebe72d4d8485ccda10f8069,
         type: 3}

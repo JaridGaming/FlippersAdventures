@@ -44,4 +44,13 @@ public class LumberJack : MonoBehaviour
         faces.x *= -1;
         transform.localScale = faces;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag != "Player")
+        {
+            return;
+        }
+        GameplayStatics.DealDamage(collision.gameObject, 1);
+    }
 }

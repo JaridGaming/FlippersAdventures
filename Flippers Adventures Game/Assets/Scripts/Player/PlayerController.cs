@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     public float timeToShieldValue;
 
     public float timeToJumpBuffValue;
-    public float timeToJumpBuff;
+    private float timeToJumpBuff;
 
     void Start()
     {

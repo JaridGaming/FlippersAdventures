@@ -6755,6 +6755,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower
       objectReference: {fileID: 0}
+    - target: {fileID: 1376169289748821753, guid: 7b8bba789eb62ac4e8812f91585615e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8925934180938486706, guid: 7b8bba789eb62ac4e8812f91585615e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6809,6 +6814,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 369638850785957773, guid: 7b8bba789eb62ac4e8812f91585615e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 174932899712212049, guid: 7b8bba789eb62ac4e8812f91585615e4,
         type: 3}
